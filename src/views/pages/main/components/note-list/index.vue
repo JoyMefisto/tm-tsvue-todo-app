@@ -1,8 +1,10 @@
 <template>
   <div>
-    <ul>
+    <ul v-if="notes.length">
       <main-note-comp v-for="(item, key) in notes" :key="key" :note="item" />
     </ul>
+    <p v-else>Список дел пуст</p>
+
     <div>
       <input type="text" placeholder="Например, новая задача" v-model="noteText">
       <button :disabled="!noteText" @click="addNewNoteHandler">Добавить</button>

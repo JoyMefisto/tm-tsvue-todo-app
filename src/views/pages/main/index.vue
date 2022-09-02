@@ -2,8 +2,7 @@
   <div>
     <h2>Список дел</h2>
 
-    <p v-if="notes.length === 0">Список дел пуст</p>
-    <main-note-list-comp v-else :notes="notes" />
+    <main-note-list-comp :notes="notes" />
   </div>
 </template>
 
